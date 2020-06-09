@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Dark Mode</title>
+    <style>
+      :root {
+        --dark-bg: #333;
+        --dark-color: #eee;
+        --light-bg: #eee;
+        --light-color: #333;
+      }
+      html {
+        font-size: 20px;
+        font-weight: 100;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        line-height: 1.7;
+      }
+      html,
+      body {
+        background-color: #333;
+        color: #eee;
+      }
+      @media screen and (prefers-color-scheme: dark) {
+        html,
+        body {
+          background-color: var(--dark-bg);
+          color: var(--dark-color);
+        }
+      }
+      @media screen and (prefers-color-scheme: light) {
+        html,
+        body {
+          background-color: var(--light-bg);
+          color: var(--light-color);
+        }
+      }
+
+      h2 {
+        font-weight: 100;
+        letter-spacing: 1ch;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Browser Dark Mode</h1></header>
+    <main>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+        reiciendis dolore at fugiat voluptate sapiente cum ducimus. Assumenda
+        perspiciatis architecto id corrupti nihil doloribus facere odit
+        reiciendis ab eaque. Corporis?
+      </p>
+      <p>
+        Error molestiae consequatur vero, rerum dolores, distinctio commodi,
+        sapiente provident ullam sint nemo incidunt fugit sunt quia tempore
+        consectetur tenetur id impedit quod quas in hic quam! Similique, in
+        commodi.
+      </p>
+      <p>
+        Rerum eius asperiores temporibus saepe ex repellendus animi ea. Quis
+        quia at dolor, eum, odio fuga eaque rem laborum voluptate consequatur
+        reprehenderit? Voluptas reprehenderit voluptatem odit vero. Quia,
+        praesentium quae.
+      </p>
+      <p>
+        Debitis suscipit repellat voluptate, sequi laudantium nisi omnis
+        voluptatum vero, pariatur at odio ipsam illo ea quis rem quidem beatae
+        dolore. Est adipisci aperiam illum veniam nam expedita et dolore.
+      </p>
+      <p>
+        Repellat, recusandae ratione rem illum quaerat consequatur mollitia,
+        minus doloribus velit sit nemo, excepturi soluta laboriosam voluptas
+        delectus! Voluptatibus accusantium eveniet, culpa incidunt voluptatum et
+        explicabo molestias atque quaerat neque.
+      </p>
+      <p>
+        Cumque deserunt rem repudiandae explicabo eligendi, tempore numquam
+        repellat voluptas atque nulla alias rerum nesciunt, molestiae ipsam
+        tempora reprehenderit necessitatibus. Dolore fugit ea dignissimos
+        exercitationem quidem pariatur, explicabo non ipsam.
+      </p>
+      <p>
+        Sed odio ea tempora temporibus! Vero sapiente distinctio, harum debitis
+        quae ad! Facilis nemo rem aut eligendi? Tempore aliquid non accusamus
+        qui odio, cupiditate molestias iure est nemo quaerat sit!
+      </p>
+      <p>
+        Optio libero quod, illum alias aliquid doloremque. Quia vero, quasi quae
+        ab ut aut dignissimos labore porro soluta rem placeat quaerat ipsa. Quia
+        minima ad, temporibus ipsa quidem ut quam?
+      </p>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let jedi = window.matchMedia("(prefers-color-scheme:light)").matches;
+        if (jedi) {
+          let h2 = document.createElement("h2");
+          h2.textContent = "Come to the darkside";
+          document.querySelector("header").appendChild(h2);
+          document.querySelector("h1").textContent = "Browser Light Mode";
+        }
+      });
+    </script>
+  </body>
+</html>

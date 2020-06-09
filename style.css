@@ -1,0 +1,246 @@
+/* Universal selector */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+}
+.text-center{
+    text-align: center;
+}
+.l-heading{
+    font-size: 3rem;
+    font-weight: lighter;
+}
+.lead{
+    font-size: 1.2rem;
+}
+.text-primary{color: #f7c08a;}
+.btn{
+    display: inline-block;
+    background-color: #d6d3cd;
+    color: #333;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn:hover{
+    border: 3px solid #93cb52;
+}
+/* Main/Core Styling that don't contain ID and Class */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    
+}
+a{text-decoration: none;}
+
+#main-nav{
+    background-color: #444;
+    color: #fff;
+    overflow: auto;
+}
+#main-nav a{
+    color: #fff;
+}
+.logo{
+    float: left;
+    padding: 15px 20px;
+}
+
+
+#main-nav ul{
+    list-style: none;
+    float: right;
+    text-align: center;
+}
+#main-nav ul li{
+    float: left;
+}
+#main-nav ul li a{
+    display: inline-block;
+    padding: 20px;
+}
+#main-nav ul li a:hover,
+#main-nav ul li a.current{
+    color: #f7c08a;
+    background-color: #333;
+}
+#main-nav .logo a:hover{
+    color: #f7c08a;
+}
+#showcase-container{
+    height: 600px;
+    display: flex;
+}
+#showcase-container::before{
+    content: '';
+    background: url('./telephone.jpg') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height:100%;
+    width: 100%;
+    opacity: 0.6;
+    z-index: -1;
+}
+#showcase-container .showcase-content p{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+#home-info{
+    height: 500px;
+}
+#home-info .info-img{
+    float: left;
+    width: 50%;
+    background: url('./showcase.jpg') no-repeat center center/cover;
+    height: 100%;
+}
+.bg-dark{background-color: #333; color: #fff;}
+.m-heading{font-size: 2rem; font-weight: 400;}
+
+
+#home-info .info-content{
+    float: right;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding: 100px 30px;
+    overflow: hidden;
+}
+#home-info .info-content a{
+    margin-top: 1rem;
+}
+.clr{clear: both;}
+
+.box{
+    float: left;
+    width: 33.33%;
+    height: 200px;
+    padding: 20px;
+    text-align: center;
+}
+.bg-light{
+    background-color: #f4f4f4;
+    color: #333;
+}
+.bg-primary{
+    background-color: #93cb52;
+    color: #fff;
+}
+#main-footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #555;
+    color: #d6d3cd;
+}
+/* Some Utilites for padding */
+.p-1{padding: 10px ;}
+.p-2{padding: 20px ;}
+.p-3{padding: 30px ;}
+/* About Page Styling */
+/* #about-info .info-content{
+    float: left;
+    width: 50%;
+    min-height: 100%;
+}
+#about-info .info-img{
+    float: right;
+    width: 50%;
+    min-height: 100%;
+}
+#about-info .info-img img{
+    width: 70%;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+} */
+#about-info{
+    display: flex;
+
+}
+#about-info .info-content{
+    width: 50%;
+}
+#about-info .info-img{
+    width: 50%;
+    min-height: 100%;
+}
+#about-info .info-img img{
+    width: 70%;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+}
+
+/* Testimonial styling */
+#testimonials{
+    height: 600px;
+    padding-top: 100px;
+    background: url('./bridges.jpg') no-repeat center center/cover;
+}
+#testimonials .testimonial{
+    margin-bottom: 50px;
+    border-radius: 5px;
+    padding: 30px;
+}
+#testimonials .testimonial img,
+#testimonials .testimonial img.girl
+{
+    width: 100px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+}
+#testimonials .testimonial img.girl{
+    width: 70px;
+}
+/* Contact Page Styling */
+#contact-form{
+    padding: 30px 20px;
+}
+#contact-form .main-form{
+    padding: 30px 0;
+}
+#contact-form .form-group{
+    margin-bottom: 20px;
+}
+#contact-form .form-group label{
+    display: block;
+    margin-bottom: 5px;
+}
+#contact-form .form-group input,
+#contact-form .form-group textarea{
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #ddd;
+    /* Message has thicker border. To match we specify border in input fields */
+}
+#contact-form .form-group textarea{
+    height: 70px;
+}
+#contact-form .form-group input:focus,
+#contact-form .form-group textarea:focus{
+    outline: none;
+    border-color: #c6c3cd;
+}
+
+.bg-medium{
+    background: #c6c3cd;
+    color: #f7c08a;
+}
+#contact-info .box i{
+    margin-bottom: 20px;
+}
+#contact-info .box:hover{
+    color: #93cb52;
+}

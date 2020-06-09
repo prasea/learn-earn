@@ -1,0 +1,23 @@
+{% extends 'blog/base.html'%}
+{% load crispy_forms_tags%}
+{%block content%}
+	<div class="content-section">
+		<form method="POST">
+			{%csrf_token%}
+			<!--fieldset tag is used to group releated element in a form-->
+			<fieldset class="form-group">
+				<legend class="border-bottom mb-4">Join Today</legend>
+				{{ form|crispy }}
+				#Just specifying the form variable will display all of the form labels and fields we need. But we also need a submit button for our form as well which isn't included in the form
+			</fieldset>
+			<div class = "form-group">
+				<button class="btn btn-outline-info" type="submit">Sign Up</button>
+			</div>
+		</form>
+		<div class="border-top pt-3">
+			<small class = "text-muted">
+				Already have an account? <a href="#" class="ml-2">Sign In</a>
+			</small>
+		</div>
+	</div>
+{%endblock content %}
