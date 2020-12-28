@@ -188,7 +188,7 @@ const UICtrl = (function(){
         getItemInput: function(){
             return {
                 name : document.querySelector('#item-name').value,
-                calories : document.querySelector('#item-calories').value
+                calories : parseFloate(document.querySelector('#item-calories').value)
             }
 
         },
